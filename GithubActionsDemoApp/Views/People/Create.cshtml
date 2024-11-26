@@ -1,0 +1,23 @@
+﻿@model Person
+@using GithubActionsDemoApp.Entities
+
+@{
+    ViewData["Title"] = "Create Person";
+}
+
+<h2>Create Person</h2>
+
+<form asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
