@@ -2,6 +2,6 @@
 
 In this repository you'll find the sample .NET App of the course **Learn Git, GitHub y Github Actions**.
 
-Link del curso con descuento: PENDING
+Link to the course with a discount: PENDING
 
-Nota: el repositorio que contiene los archivos del curso es: PENDING
+Note: The repository that contains the files of the course is: https://github.com/gavilanch/Learn-Git-GitHub-And-GitHub-Actions
