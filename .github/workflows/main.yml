@@ -12,6 +12,7 @@ on:
 
 env:
   DOTNET_VERSION: 8.0.x
+  PROJECT: GithubActionsDemoApp/GithubActionsDemoApp.csproj
 
 jobs:
   build:
@@ -32,4 +33,14 @@ jobs:
         run: dotnet build --no-restore
         
       - name: Test
-        run: dotnet test --no-build        
+        run: dotnet test --no-build
+        
+      - name: Publish
+        run: dotnet publish ${{ env.PROJECT }} -c Release -o myapp --runtime winx86
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.6.1
+        with:
+          path: ./myapp
+          name: build
+        
