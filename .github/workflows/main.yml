@@ -16,6 +16,8 @@ env:
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Getting the code
@@ -43,4 +45,14 @@ jobs:
         with:
           path: ./myapp
           name: build
+          
+      - name: Zip
+        run: zip -r myapp.zip ./myapp
+        
+      - name: GH Release
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          files: ./myapp.zip
+          body: "Our application"
+          tag_name: ${{ github_refname }}
         
