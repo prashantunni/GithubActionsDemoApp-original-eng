@@ -54,5 +54,5 @@ jobs:
         with:
           files: ./myapp.zip
           body: "Our application"
-          tag_name: ${{ github_refname }}
+          tag_name: ${{ github.ref_name }}
         
