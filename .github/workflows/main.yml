@@ -36,7 +36,7 @@ jobs:
         run: dotnet test --no-build
         
       - name: Publish
-        run: dotnet publish ${{ env.PROJECT }} -c Release -o myapp --runtime winx86
+        run: dotnet publish ${{ env.PROJECT }} -c Release -o myapp --runtime win-x86
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.6.1
