@@ -11,6 +11,4 @@ jobs:
         version: [10, 12, 14]
       steps:
       - name: Run the matrix strategy
-        run: |
-        echo "${{ matrix.os}}"
-        echo "${{ matrix.version}}"
+        run: echo "${{ matrix.os }}" && echo "${{ matrix.version }}"
