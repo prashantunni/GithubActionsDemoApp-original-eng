@@ -1,0 +1,11 @@
+name: matrix-worflow
+
+on:
+  workflow_dispatch
+
+job:
+  matrix-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run the matrix strategy
+      run: echo "$GITHUB_ACTION - $GITHUB_ACTOR"
