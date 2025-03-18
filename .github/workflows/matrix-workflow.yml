@@ -11,4 +11,6 @@ jobs:
         version: [10, 12, 14]
       steps:
       - name: Run the matrix strategy
-        run: echo "$GITHUB_ACTION - $GITHUB_ACTOR"
+        run: |
+        echo "${{ matrix.os}}"
+        echo "${{ matrix.version}}"
