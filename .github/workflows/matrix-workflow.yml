@@ -5,7 +5,10 @@ on:
 
 jobs:
   matrix-job:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run the matrix strategy
-      run: echo "$GITHUB_ACTION - $GITHUB_ACTOR"
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, ubuntu-20.04]
+        version: [10, 12, 14]
+      steps:
+      - name: Run the matrix strategy
+        run: echo "$GITHUB_ACTION - $GITHUB_ACTOR"
