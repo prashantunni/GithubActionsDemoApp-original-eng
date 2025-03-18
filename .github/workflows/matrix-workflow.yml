@@ -10,5 +10,5 @@ jobs:
         os: [ubuntu-22.04, ubuntu-20.04]
         version: [10, 12, 14]
       steps:
-      - name: Run the matrix strategy
-        run: echo "${{ matrix.os }}" && echo "${{ matrix.version }}"
+        - name: Run the matrix strategy
+          run: echo "${{ matrix.os }}" && echo "${{ matrix.version }}"
